@@ -1,0 +1,19 @@
+package saisho;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+
+	}
+
+		public static double calcTriangleArea(double bottom,double height){
+			System.out.println(bottom * height /2);
+
+
+
+
+
+
+	}
+}

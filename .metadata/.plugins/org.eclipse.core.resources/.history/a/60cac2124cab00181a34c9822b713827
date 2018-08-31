@@ -1,0 +1,20 @@
+package saisho;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+		int[] a = new int[5];
+		
+		int[] b  = new int[5];
+		int c = a.length;
+		System.out.println(c+"は配列の長さ");
+		
+		
+
+
+
+	}
+
+}

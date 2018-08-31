@@ -1,0 +1,31 @@
+package Yusha;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+		Hero h = new Hero();
+		
+		h.name = "ミナト";
+		h.hp = 10;
+		System.out.println("勇者、"+h.name+"を生み出した");
+		
+		h.sit(5);
+		h.slip();
+		
+		Matango m1 = new Matango();
+		m1.hp = 1000;
+	    m1.suffix ='A';
+		m1.run();
+		
+		Matango m2 = new Matango();
+		m2.hp = 200000;
+		m2.suffix = 'B';
+		m2.run();
+		
+		
+		
+
+	}
+}

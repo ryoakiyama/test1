@@ -1,0 +1,17 @@
+package saisho;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+		String[] name = new String[5];
+		String[] name = {asaka,ayaki,hikari,sara,rina};
+
+
+
+
+
+	}
+
+}

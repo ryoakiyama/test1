@@ -1,0 +1,25 @@
+package saisho;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		
+		int[] numbers = {3,4,9};
+		System.out.println("数字を入力してください");
+		int input = new Scanner(System.in).nextInt();
+		for(int a :numbers){
+			if(numbers[a]==input){
+				System.out.println("あたり");
+			}
+		}
+
+
+
+
+
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package saisho;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+
+		int[] moneylist = {121902,8302,55100};
+
+
+		for(int b:moneylist){
+			System.out.println(b);
+		}
+
+
+
+
+	}
+
+}

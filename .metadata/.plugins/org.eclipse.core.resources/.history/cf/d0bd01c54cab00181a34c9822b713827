@@ -1,0 +1,21 @@
+package saisho;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		int[] tall = {163,152,155,150,157};
+		int sum = tall[0]+tall[1]+tall[2]+tall[3]+tall[4];
+		int avg = sum/tall.length;
+
+		System.out.println("彼女らの平均身長は"+avg+"です");
+
+
+
+
+
+
+
+	}
+
+}

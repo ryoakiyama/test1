@@ -1,0 +1,41 @@
+package Yusha;
+import java.util.Random;
+
+public class Hero {
+
+
+	String name = null;
+	int hp = 50;
+	final int MAX_HP = 50;
+	int mp = 10;
+	final int MAX_MP = 100;
+
+
+	public void selfAid(){
+		System.out.println(this.name + "は、セルフエイドを行った");
+		this.hp = this.MAX_HP;
+		this.mp -= 5;
+		System.out.println("セルフエイドを行った");
+
+	}
+	public int pray(int sec){
+		System.out.println(this.name+"は"+sec+"秒間天に祈った");
+		int r = new Random().nextInt(30) + sec;
+		int b = Math.min(this.MAX_HP - this.mp,r);
+		
+		this.mp += b;
+		System.out.println("うぉ、"+b+"も回復した");
+		return b;
+		}
+	public int attack(int Asec){
+		System.out.println(this.name+"は"+Asec+"/10くらいの力で攻撃をした");
+		int c = new Random().nextInt(30)+Asec;
+
+		System.out.println("敵に"+c+"のダメージを与えた");
+		return c;
+		
+	}
+
+
+
+}

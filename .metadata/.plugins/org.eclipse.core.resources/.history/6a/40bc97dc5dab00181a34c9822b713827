@@ -1,0 +1,31 @@
+package saisho;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		introduceOneself();
+
+	}
+	public static void introduceOneself(){
+
+		String name = "タケシ";
+		int age;
+		double height;
+		char sex;
+
+	System.out.println("私の名前とかは"+name);
+
+
+
+
+
+
+
+	}
+
+
+}
+
+

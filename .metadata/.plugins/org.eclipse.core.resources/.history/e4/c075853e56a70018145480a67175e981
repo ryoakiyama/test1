@@ -1,0 +1,25 @@
+package jp.co.internous.action;
+
+public class hairetsu {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+		int[] a = new int[5];
+		int nagasa = a.length;
+		a[1]= 30;
+		
+		System.out.println("配列の数"+nagasa);
+		System.out.println(a[1]);
+		
+		int[] chimo = {152,41,70,60,60};
+		int total = chimo[0]+chimo[1]+chimo[2]+chimo[3]+chimo[4];
+		int avg=total/chimo.length;
+		
+		
+		System.out.println(total);
+		System.out.println(avg);
+
+
+	}
+
+}
