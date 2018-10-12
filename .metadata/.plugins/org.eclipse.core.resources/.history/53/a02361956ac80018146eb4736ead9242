@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+<struts>
+
+<constant name="struts.devMode" value="true" />
+<package name="com.internousdev.ecsite.action" extends="struts-default">
+<!--
+<action name="GoAction" class="com.internousdev.e_bookshare.action.GoAction" method="execute">
+<result name="success">shop.jsp</result>
+</action>
+
+<action name="BuyAction" class="com.internousdev.e_bookshare.action.BuyAction" method="execute">
+<result name="success">buy.jsp</result>
+</action>
+
+<action name="ListAction" class="com.internousdev.e_bookshare.action.ListAction" method="execute">
+<result name="success">list.jsp</result>
+</action>
+ -->
+
+
+</package>
+</struts>

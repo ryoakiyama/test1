@@ -1,0 +1,5 @@
+package com.internousdev.e_bookshare.dto;
+
+public class BuyDTO {
+
+}

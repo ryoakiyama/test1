@@ -1,0 +1,27 @@
+package band;
+
+public class BandInfoDto {
+    private String bandname;
+    private int bandCreateYear;
+    private int bandType;
+
+    public BandInfoDto(String bandname, int bandCreateYear, int bandType) {
+        this.bandname = bandname;
+        this.bandCreateYear = bandCreateYear;
+        this.bandType = bandType;
+    }
+    public String getBandname() {
+        return bandname;
+    }
+    public int getBandCreateYear() {
+        return bandCreateYear;
+    }
+    public int getBandType() {
+        return bandType;
+    }
+    @Override
+    public String toString() {
+        return "BandInfoDto [bandname=" + bandname + ", bandCreateYear="
+                + bandCreateYear + ", bandType=" + bandType + "]";
+    }
+}

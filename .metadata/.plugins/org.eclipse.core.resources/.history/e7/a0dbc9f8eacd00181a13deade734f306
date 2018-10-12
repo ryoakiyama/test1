@@ -1,0 +1,11 @@
+package com.internousdev.dogweb.action;
+
+public class HomeAction {
+
+	public String execute(){
+
+	String ret  SUCCESS;
+	return ret;
+	}
+
+}

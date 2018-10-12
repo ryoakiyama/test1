@@ -1,0 +1,54 @@
+package com.internousdev.e_bookshare;
+
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+public class List extends ActionSupport implements SessionAware {
+
+	private Map<String,Object> session;
+
+public String execute() throws SQLException {
+
+
+	listDAO listDAO = new listDAO();
+	listDTO listDTO = new listDTO();
+	listDTO = listDAO.getMyPageUserInfo();
+
+	session.put("bookname", listDTO.getBookname());
+	session.put("bookprice", listDTO.getBookprice());
+
+
+
+
+
+
+
+
+	String result = SUCCESS;
+	return result;
+	}
+
+
+
+
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+	this.session = session;
+
+	}
+
+
+	public String getMessage() {
+	return this.message;
+
+	}
+	public void setMessage(String message) {
+	this.message = message;
+	}
+}

@@ -1,0 +1,49 @@
+package com.internousdev.e_bookshare;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.internousdev.e_bookshare.util.DBConnector;
+
+
+public class listDAO {
+private DBConnector dbConnector = new DBConnector();
+private Connection connection = dbConnector.getConnection();
+
+public ArrayList<listDTO> getMyPageUserInfo () throws SQLException {
+
+	ArrayList<listDTO> listDTO = new ArrayList<listDTO>();
+	String sql = "SELECT * from book_list";
+
+try {
+
+		PreparedStatement stmt = connection.prepareStatement(sql);
+		ResultSet resultSet = stmt.executeQuery();
+
+
+		while(resultSet.next()) {
+		//DTOに入れてそれをリストに入れるという作業
+
+		listDTO dto = new listDTO();
+
+		dto.setBookname(resultSet.getString("bookname"));
+		dto.setBookprice(resultSet.getString("bookprice"));
+
+
+		listDTO.add(dto);
+		//そのデータを何件も入る箱に入れている
+		//そうして全て表示されたものがList
+
+		}
+	} catch(Exception e) {
+	e.printStackTrace();
+	} finally {
+	connection.close();
+	}
+	return listDTO;
+	}
+
+}
+

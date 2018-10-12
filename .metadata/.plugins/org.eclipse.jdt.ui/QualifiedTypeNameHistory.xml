@@ -11,4 +11,11 @@
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="com.mysql.fabric.xmlrpc.base.Array"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dao.BuyItemDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.ecsite.dto.BuyItemDTO"/>
 </qualifiedTypeNameHistroy>
