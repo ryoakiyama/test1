@@ -11,16 +11,18 @@ public class UCCAction extends ActionSupport implements SessionAware {
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
+	private String img;
 	public Map<String,Object>session;
 	private String errorMessage;
 
 	public String execute(){
 
 		String result = SUCCESS;
-		if(!(loginUserId.equals(""))&& !(loginPassword.equals(""))&& !(userName.equals(""))){
+		if(!(loginUserId.equals(""))&& !(loginPassword.equals(""))&& !(userName.equals(""))&& !(img.equals(""))){
 			session.put("loginUserId", loginUserId);
 			session.put("loginPassword",loginPassword);
 			session.put("userName", userName);
+			session.put("img", img);
 		}else{
 			setErrorMessage("未入力の項目があります");
 			result = ERROR;
@@ -64,6 +66,14 @@ public class UCCAction extends ActionSupport implements SessionAware {
 
 	public void setErrorMessage(String errorMessage){
 		this.errorMessage = errorMessage;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 }

@@ -1,0 +1,20 @@
+package com.internousdev.ecsite.dto;
+
+public class BuyItemDTO {
+
+public int id;
+public String itemName;
+public String itemPrice;
+private String itemStock;
+private String count;
+private String pay;
+private String userMasterId;
+private String totalPrice;
+private String totalCount;
+private String payment;
+private String insert_date;
+
+
+
+
+}

@@ -33,9 +33,7 @@ pageEncoding="UTF-8"%>
 
 <h3>どのような商品を追加しますか？</h3>
 
-
 <s:form action="CreateItemConfirmAction">
-
 
 <table>
 <tr>
@@ -44,12 +42,7 @@ pageEncoding="UTF-8"%>
 </td>
 <td>
 
-
-
 <input type="text" name="newItemName" value="" />
-
-
-
 
 </td>
 </tr>

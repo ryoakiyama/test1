@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- Strutsの詳細設定 -->
+<struts>
+
+<constant name="struts.devMode" value="true" />
+<package name="com.internousdev.oden.action" extends="struts-default">
+
+<!-- GoHomeAction -->
+<action name="OCCAction" class="com.internousdev.oden.action.OCCAction" method="execute">
+<result name="success">occ.jsp</result>
+</action>
+
+<action name="OCSAction" class="com.internousdev.oden.action.OCSAction" method="execute">
+<result name="success">ocs.jsp</result>
+</action>
+
+<action name="OdenAction" class="com.internousdev.oden.action.OdenAction" method="execute">
+<result name="success">oden.jsp</result>
+</action>
+
+
+</package>
+</struts>

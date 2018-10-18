@@ -19,11 +19,12 @@ pageEncoding="UTF-8"%>
 <body>
 
 <div id="header">
-
 <div id="pr">
 </div>
-
 </div>
+
+
+
 <div id="main">
 
 <div id="top">
@@ -33,16 +34,13 @@ pageEncoding="UTF-8"%>
 <div id=”text-center”>
 
 
-<s:form action="HomeAction">
-<s:submit value="商品購入"/>
+<s:form class="btn" action="HomeAction">
+<s:submit class="btn" value="商品購入"/>
 </s:form>
 
 <s:form action="CreateItemAction">
 <s:submit value="管理画面"/>
 </s:form>
-
-
-
 <s:if test="#session.id != null">
 
 <p>ログアウトする場合は
@@ -54,6 +52,11 @@ pageEncoding="UTF-8"%>
 </div>
 
 </div>
+
+
+
+
+
 <div id="footer">
 
 <div id="pr">

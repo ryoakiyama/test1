@@ -13,6 +13,7 @@ public class UCSAction extends ActionSupport implements SessionAware{
 	private String loginUserId;
 	private String loginPassword;
 	private String userName;
+	private String img;
 	public Map<String,Object>session;
 	private UCSDAO ucsDAO = new UCSDAO();
 
@@ -21,6 +22,7 @@ public class UCSAction extends ActionSupport implements SessionAware{
 		//DAOを経由して入力された内容をDBに格納します
 		ucsDAO.createUser(session.get("loginUserId").toString(),
 				session.get("loginPassword").toString(),
+				session.get("img").toString(),
 				session.get("userName").toString());
 
 		String result = SUCCESS;
@@ -54,6 +56,14 @@ public class UCSAction extends ActionSupport implements SessionAware{
 	@Override
 	public void setSession(Map<String,Object> session){
 		this.session = session;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 

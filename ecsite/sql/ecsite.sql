@@ -3,6 +3,7 @@ set foreign_key_checks = 0;
 drop database if exists ecsite;
 create database if not exists ecsite;
 use ecsite;
+
 drop table if exists login_user_transaction;
 create table login_user_transaction(
 id int not null primary key auto_increment,
@@ -35,5 +36,17 @@ insert_date datetime,
 delete_date datetime
 );
 
+drop table if exists cart;
+create table cart(
+id int not null primary key auto_increment,
+buyItemId varchar(30),
+itemName varchar(30),
+count int,
+itemPrice int,
+userId varchar(30),
+buyItemConfirmDate datetime
+);
+
+INSERT INTO cart(buyItemId,itemName,count,itemPrice,userId) VALUES("1","えんぴつ",1,100,"taro");
 INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("ノートBook",100,50);
 INSERT INTO login_user_transaction(login_id, login_pass, user_name) VALUES("internous","internous01","test");

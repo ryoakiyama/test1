@@ -1,0 +1,17 @@
+set names utf8;
+set foreign_key_checks = 0;
+drop database if exists oden;
+
+create database if no exists oden;
+use oden;
+
+drop table if exists oden;
+
+create table oden(
+in int not null primary key auto_increment,
+oden_id varchar(16) unique,
+oden_name varchar(50),
+oden_price varchar(50)
+);
+
+INSERT INTO oden(oden_id,oden_name,oden_price) VALUES(1,"もち巾着","200円");

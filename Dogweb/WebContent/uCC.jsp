@@ -38,6 +38,7 @@
 <s:property value="loginUserId" escape="false" />
 </td>
 </tr>
+
 <tr id="box">
 <td>
 <label>犬PASS:</label>
@@ -46,6 +47,7 @@
 <s:property value="loginPassword" escape="false" />
 </td>
 </tr>
+
 <tr id="box">
 <td>
 <label>犬の名前:</label>
@@ -54,11 +56,17 @@
 <s:property value="userName" escape="false" />
 </td>
 </tr>
-<tr>
+
+<tr id="box">
 <td>
+<label>犬の画像</label>
+</td>
+<td>
+<s:property value="img" escape="false" />
 <s:submit value="完了" />
 </td>
 </tr>
+
 </s:form>
 </table>
 </div>

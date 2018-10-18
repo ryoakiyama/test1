@@ -18,14 +18,11 @@ pageEncoding="UTF-8"%>
 </head>
 <body>
 
-<div id="main">
-<div id="top">
-</div>
-</div>
+
 
 <div id="main">
 <div id="top">
-<p>新しい犬を追加してください</p>
+<p>ようこそ！<s:property value="human_pass"/>さん。新しい犬を追加してください</p>
 </div>
 <div>
 <s:if test="errorMessage !=''">
@@ -42,14 +39,16 @@ pageEncoding="UTF-8"%>
 <input type="text" name="loginUserId" value="" />
 </td>
 </tr>
+
 <tr>
 <td>
 <label>犬種</label>
 </td>
 <td>
-<input type="text" name="loginPassword" value="" placeholder="パスワードを入力してください">
+<input type="text" name="loginPassword" value="" placeholder="犬の種類を入力してください">
 </td>
 </tr>
+
 <tr>
 <td>
 <label>犬の名前：</label>
@@ -58,6 +57,17 @@ pageEncoding="UTF-8"%>
 <input type="text" name="userName" value="" placeholder="犬の名前を入力してください"/>
 </td>
 </tr>
+
+<tr>
+<td>
+<label>犬の画像</label>
+</td>
+<td>
+<input type="file" name="img">
+</td>
+</tr>
+
+
 <s:submit value="登録"/>
 </s:form>
 </table>

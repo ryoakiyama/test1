@@ -1,0 +1,5 @@
+package com.internousdev.bonstagram.dao;
+
+public class PostDAO {
+
+}

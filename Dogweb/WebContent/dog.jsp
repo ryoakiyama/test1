@@ -17,6 +17,7 @@
 <th>犬ID</th>
 <th>犬の名前</th>
 <th>犬種</th>
+<th>写真</th>
 <th>備考</th>
 </tr>
 <s:iterator value="dogDTOList">
@@ -24,6 +25,7 @@
 <td><s:property value="userId"/></td>
 <td><s:property value="userName"/></td>
 <td><s:property value="password"/></td>
+<td><s:property value="img"/></td>
 <td><s:property value="result"/></td>
 </tr>
 </s:iterator>

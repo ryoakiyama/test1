@@ -30,10 +30,8 @@ public String execute() throws SQLException {
 if(deleteFlg == null) {
 	//このifデリートフラグは何なのか
 
-
-	String item_transaction_id = session.get("id").toString();
 	String user_master_id = session.get("login_user_id").toString();
-	myPageList = myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
+	myPageList = myPageDAO.getMyPageUserInfo(user_master_id);
 	//ここがgetMyPageUserInfo。それをmyPageListにいれ、MyPage.jspに続く。
 
 
@@ -51,9 +49,8 @@ if(deleteFlg == null) {
 
 //商品を削除するメソッド
 	public void delete() throws SQLException {
-	String item_transaction_id = session.get("id").toString();
 	String user_master_id = session.get("login_user_id").toString();
-	int res = myPageDAO.buyItemHistoryDelete(item_transaction_id, user_master_id);
+	int res = myPageDAO.buyItemHistoryDelete(user_master_id);
 		if(res > 0) {
 		myPageList = null;
 		setMessage("商品情報を正しく削除しました。");

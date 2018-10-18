@@ -1,0 +1,10 @@
+package com.internousdev.ecsite.dto;
+
+public class BuyItemCompleteDTO {
+
+	public void setId(String valueOf) {
+		// TODO 自動生成されたメソッド・スタブ
+
+	}
+
+}

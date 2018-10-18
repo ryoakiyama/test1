@@ -13,4 +13,8 @@ public class ItemList {
 	public void print(){
 		System.out.println(name+price+"円");
 	}
+
+	public  void taro(String name){
+		System.out.println("私の名前は"+name+"です");
+	}
 }

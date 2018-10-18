@@ -1,0 +1,17 @@
+
+#header{
+	height:70px;
+}
+
+#pr{
+	background-color:white;
+
+}
+
+
+body{
+	background-color:yellow;
+	margin:0 auto;
+	text-align:center;
+
+}

@@ -45,37 +45,45 @@ function submitAction(url) {
 
 <s:form>
 
-
+<table>
 <tr>
-
 <td>商品名</td>
-<td><s:property value="session.buyItem_name" /></td>
-
-</tr>
-<tr>
-
 <td>値段</td>
-<td><s:property value="session.total_price" /><span>円</span></td>
-
-</tr>
-<tr>
-
 <td>購入個数</td>
-<td><s:property value="session.count" /><span>個</span></td>
-
+<td>小計</td>
 </tr>
+<s:iterator value="responceList">
 <tr>
-
+<td><s:property value="itemName" /></td>
+<s:hidden name="itemName" value="%{itemName}"/>
+<td><s:property value="itemPrice" /><span>円</span></td>
+<s:hidden name="itemPrice" value="%{itemPrice}"/>
+<td><s:property value="totalCount" /><span>個</span></td>
+<s:hidden name="totalCount" value="%{totalCount}"/>
+<td><s:property value="totalPrice" /><span>円</span></td>
+<s:hidden name="totalPrice" value="%{totalPrice}"/>
+</tr>
+<s:hidden name="id" value="%{id}"/>
+<s:hidden name="itemTransactionId" value="%{itemTransactionId}"/>
+<s:hidden name="itemPrice" value="%{itemPrice}"/>
+<s:hidden name="itemStock" value="%{itemStock}"/>
+<s:hidden name="count" value="%{count}"/>
+<s:hidden name="loginUserId" value="%{loginUserId}"/>
+<s:hidden name="userMasterId" value="%{userMasterId}"/>
+</s:iterator>
+</table>
+<br>
+<table>
+<tr>
 <td>支払い方法</td>
-<td><s:property value="session.pay" /></td>
-
+<s:if test="pay==1">
+<td>現金払い</td>
+</s:if>
+<s:if test="pay==2">
+<td>クレジットカード</td>
+</s:if>
+<s:hidden name="pay" value="%{pay}"/>
 </tr>
-<tr>
-
-<td><br></td>
-
-</tr>
-
 
 <tr>
 <td><input type="button" value="戻る"
@@ -84,6 +92,7 @@ onclick="submitAction('HomeAction')" /></td>
 onclick="submitAction('BuyItemConfirmAction')" /></td>
 
 </tr>
+</table>
 </s:form>
 
 </div>

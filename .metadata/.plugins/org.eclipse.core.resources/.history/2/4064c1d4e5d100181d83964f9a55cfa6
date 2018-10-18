@@ -1,0 +1,39 @@
+package com.internousdev.bonstagram.action;
+import java.sql.SQLException;
+import java.util.Map;
+
+import com.internousdev.bonstagram.dao.PostDAO;
+
+public class PostAction {
+
+	private String kakikomi;
+
+
+	public String execute() throws SQLException{
+
+		PostDAO.postComplete(session.get("kakikomi").toString());
+
+		String result = SUCCESS;
+		return result;
+
+
+
+
+	}
+
+
+	public String getKakikomi() {
+		return kakikomi;
+	}
+
+	public void setKakikomi(String kakikomi) {
+		this.kakikomi = kakikomi;
+	}
+
+	public void setSession(Map<String,Object> session){
+		this.session = session;
+	}
+
+
+
+}

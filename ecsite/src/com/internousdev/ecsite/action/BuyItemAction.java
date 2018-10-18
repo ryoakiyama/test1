@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.ecsite.dao.BuyItemDAO;
+import com.internousdev.ecsite.dao.BuyItemSelectDAO;
 import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 public class BuyItemAction extends ActionSupport implements SessionAware {
@@ -21,24 +21,20 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	private String itemTransactionId;
 	private String totalCount;
 	private String totalPrice;
-	private String itemStock;
 	private String count;
 	private String pay;
 	private Collection<String> checklist;
 	private String userMasterId;
 	private String errorMessage;
-
 	public Map<String, Object> session;
-
-
 
 	private List<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
 
+	public List<BuyItemDTO> responceList = new  ArrayList<BuyItemDTO>();
 
 	public String execute() throws SQLException{
 		String result = ERROR;
 		System.out.println("-----------BuyItemConfirmAction");
-
 		System.out.println("checkList:"+ checkList);
 		System.out.println("id:"+ id);
 		System.out.println("itemName:"+ itemName);
@@ -49,43 +45,48 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		String[] idList = id.split(", ", 0);
 		String[] itemNameList = itemName.split(", ", 0);
 		String[] itemPriceList = itemPrice.split(", ", 0);
-		String[] itemStockList = itemStock.split(", ", 0);
 		String[] countList = count.split(", ", 0);
 
-		session.get("____");
+		userMasterId = session.get("login_user_id").toString();
 
 //	String result = SUCCESS;
 
 		if(checkList==null){
 			errorMessage = "商品が選択されていません";
-			BuyItemDAO buyItemDAO = new BuyItemDAO();
-			List<BuyItemDTO> buyItemDTOList = buyItemDAO.getBuyItemInfo();
-			session.put("buyItemDTOList", buyItemDTOList);
 			return ERROR;
 		}
+
+		BuyItemSelectDAO buyItemSelectDAO = new BuyItemSelectDAO();
+		List<BuyItemDTO> buyItemDTOList = buyItemSelectDAO.getBuyItemInfo();
 
 		System.out.println("ID数------->" + idList.length);
 		for(int i = 0; i < idList.length;i++){
 			for(String check : checkList){
 				System.out.println("CHECKED ID-------->" + check);
-				if(check.equals(String.value0f(idList[i]))){
+				if(check.equals(String.valueOf((idList[i])))){
 					BuyItemDTO dto = new BuyItemDTO();
 					id=idList[i].toString();
-					itemTransactionId = idList[i].toString();
-					itemName = idList[i].toString();
-					itemPrice = idList[i].toString();
-					itemStock = idList[i].toString();
-					count = idList[i].toString();
+					dto.setId(Integer.parseInt(idList[i].toString()));
+					dto.setItemName(itemNameList[i].toString());
+					dto.setItemPrice(itemPriceList[i].toString());
+					dto.setCount(countList[i].toString());
 
-					int totalCount = Interger.parseIne(countList[i].toString());
-					int price = Interger.parseInt(itemPriceList[i].toString());
-					int total = price * totalCount;
-					totalCount = idList[i].toString();
-					userMasterId = idList[i].toString();
-					pay = idList[i].toString();
+					int intTotalCount = Integer.parseInt(countList[i].toString());
+					int price = Integer.parseInt(itemPriceList[i].toString());
+					int total = price * intTotalCount;
+					dto.setTotalPrice(String.valueOf(total));
+					dto.setItemStock(buyItemDTOList.get(i).getItemStock());
 
+					dto.setTotalCount(String.valueOf(countList[i].toString()));
+					dto.setUserMasterId(userMasterId);
+					//pay = idList[i].toString();
+					if(pay.equals("2")) {
+						dto.setPay("クレジットカード");
+					} else {
+						dto.setPay("現金払い");
+					}
 
-
+//					dto.setPay(check);
 
 					System.out.println("----カート情報["+(i)+"]-----");
 					System.out.println("ID   :"+dto.getId());
@@ -95,14 +96,18 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 					System.out.println("COUNT:"+dto.getCount());
 					System.out.println("TOTALPRICE:"+dto.getTotalPrice());
 					System.out.println("TOTALCOUNT:"+dto.getTotalCount());
+					System.out.println("ITEMSTOCK:"+dto.getItemStock());
 					System.out.println("USERMASTERID:"+dto.getUserMasterId());
 					System.out.println("Pay:"+dto.getPay());
 					System.out.println("--------------------------------");
 
-					buyItemDTOList.add(dto);
+					responceList.add(dto);
 				}
 			}
 		}
+		session.put("buyItemDTOList", responceList);
+
+		result = SUCCESS;
 
 
 
@@ -194,14 +199,6 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 	public void setTotalPrice(String totalPrice) {
 		this.totalPrice = totalPrice;
-	}
-
-	public String getItemStock() {
-		return itemStock;
-	}
-
-	public void setItemStock(String itemStock) {
-		this.itemStock = itemStock;
 	}
 
 	public Collection<String> getChecklist() {

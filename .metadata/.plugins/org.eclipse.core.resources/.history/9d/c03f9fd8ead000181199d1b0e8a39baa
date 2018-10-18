@@ -1,0 +1,5 @@
+package com.internousdev.dogweb.action;
+
+public class LoginAction {
+
+}

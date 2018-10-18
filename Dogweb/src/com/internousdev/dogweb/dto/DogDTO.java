@@ -4,6 +4,7 @@ public class DogDTO {
 	private int userId;
 	private String userName;
 	private String password;
+	private String img;
 	private String result;
 	public int getUserId() {
 	return userId;
@@ -29,6 +30,12 @@ public class DogDTO {
 	}
 	public void setResult(String result) {
 	this.result = result;
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 }
