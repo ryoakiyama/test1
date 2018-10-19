@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.mysql.fabric.xmlrpc.base.Array"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dao.BuyItemDAO"/>
 <fullyQualifiedTypeName name="com.internousdev.ecsite.dto.BuyItemDTO"/>
@@ -23,5 +22,7 @@
 <fullyQualifiedTypeName name="com.internousdev.dogweb.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+<fullyQualifiedTypeName name="akiyama.ItemList"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
 </qualifiedTypeNameHistroy>

@@ -17,6 +17,8 @@ public class CreateItemConfirmAction extends ActionSupport implements SessionAwa
 
 
 		//ここにひとまずサクセスを入れている理由は何？
+		//サクセスなのはわからないが、ここで初期値を入れるのは何も返せないというようのを防ぐためである
+		
 		String result = SUCCESS;
 
 		if(!(newItemName.equals(""))

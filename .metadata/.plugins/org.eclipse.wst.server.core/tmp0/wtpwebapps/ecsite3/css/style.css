@@ -21,6 +21,11 @@ body{
 
 }
 
+table {
+text-align:center;
+margin:0 auto;
+}
+
 #top{
 	background-color:white;
 
@@ -32,3 +37,7 @@ body{
 }
 
 
+
+input:hover{
+	background-color:lightyellow;
+}

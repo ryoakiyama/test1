@@ -4,15 +4,20 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
+import java.util.Scanner;
 
 public class Helloworld {
 
 	public static void main(String[] args) {
 
+		System.out.println("あなたの名前を入力してください");
+		Scanner scn = new Scanner(System.in);
 
-		ItemList il = new ItemList();
-		il.taro("かおり");
+
+		String kaori = scn.next();
+
+		System.out.println(kaori+"さん、おはようございます");
+
 
 		Map<String,String> asaka = new HashMap<>();
 		asaka.put("samurai","侍");
@@ -38,15 +43,9 @@ public class Helloworld {
 
 		ArrayList<ItemList> list = new ArrayList<ItemList>();
 
-		ItemList list1 = new ItemList("えんぴつ",80);
-		ItemList list2 = new ItemList("ペン",60);
-		ItemList list3 = new ItemList("消しゴム",100);
-		ItemList list4 = new ItemList("紙",100);
 
-		list.add(list1);
-		list.add(list2);
-		list.add(list3);
-		list.add(list4);
+
+
 
 		Iterator<ItemList> iter = list.iterator();
 
