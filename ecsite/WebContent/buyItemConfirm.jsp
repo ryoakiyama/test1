@@ -63,11 +63,14 @@ function submitAction(url) {
 <td><s:property value="totalPrice" /><span>円</span></td>
 <s:hidden name="totalPrice" value="%{totalPrice}"/>
 </tr>
+
 <s:hidden name="id" value="%{id}"/>
 <s:hidden name="itemTransactionId" value="%{itemTransactionId}"/>
 <s:hidden name="itemPrice" value="%{itemPrice}"/>
+
 <s:hidden name="itemStock" value="%{itemStock}"/>
 <s:hidden name="count" value="%{count}"/>
+
 <s:hidden name="loginUserId" value="%{loginUserId}"/>
 <s:hidden name="userMasterId" value="%{userMasterId}"/>
 </s:iterator>

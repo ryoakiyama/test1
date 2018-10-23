@@ -18,17 +18,12 @@ pageEncoding="UTF-8"%>
 <body>
 
 	<div id="header">
-
 	<div id="pr">
 	</div>
-
 	</div>
 	<div id="main">
-
 	<div id="top">
-
 	<p>NewItemCreateComplete</p>
-
 	</div>
 	<div>
 

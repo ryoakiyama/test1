@@ -50,8 +50,6 @@ public LoginDTO getLoginUserInfo(String loginUserId, String loginPassword) {
 		}
 
 
-
-
 public List<BuyItemDTO> select(){
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
@@ -83,14 +81,5 @@ public List<BuyItemDTO> select(){
 				}
 
 				return myPageList;
-
-
-
 			}
-
-
-
-
-
-
 }
