@@ -24,42 +24,53 @@ pageEncoding="UTF-8"%>
 </div>
 <div id="main">
 <div id="top">
-<p>BuyItem</p>
+<p>商品購入</p>
 </div>
 <div>
-<h3>ご購入情報は以下になります</h3>
-<s:form action="BuyITemAction">
-<table>
+<h3>どの商品を購入しますか？</h3>
+
+<s:form action="BuyItemAction">
+<table border="2">
 <tr>
-<td>#</td><td>商品ID</td><td>商品名</td><td>値段</td><td>購入個数</td>
+
+<th>#</th>
+<th>商品ID</th>
+<th>商品名</th>
+<th>値段</th>
+<th>購入個数</th>
+
 </tr>
+
 <s:iterator value="#session.buyItemDTOList">
 	<tr>
 	<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}"/></td>
 	<td><s:property value="id" /><s:hidden name="id" value="%{id}" /></td>
 	<td><s:property value="itemName" /><s:hidden name="itemName" value="%{itemName}" /></td>
 	<td><s:property value="itemPrice" /><s:hidden name="itemPrice" value="%{itemPrice}" /></td>
-	<td>
-		<select name="count">
-		<option value="1" selectes="selected">1</option>
+	<td><select name="count">
+		<option value="1" selected="selected">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
 		<option value="4">4</option>
 		<option value="5">5</option>
-		</select>
-	</td>
+		</select></td>
+
 	</tr>
 </s:iterator>
 </table>
 
 <table>
-<tr><td><span>支払い方法</span></td></tr>
+<tr>
+<td><span>支払い方法</span></td>
+</tr>
+
 <tr>
 <td>
 <input type="radio" name="pay" value="1" checked="checked">現金払い
 <input type="radio" name="pay" value="2">クレジットカード
 </td>
 </tr>
+
 <tr><td><s:submit value="購入"/></td></tr>
 </table>
 </s:form>

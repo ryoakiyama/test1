@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Home画面</title>
+<title>UserCreateConfirm画面</title>
 <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
@@ -22,7 +22,7 @@ pageEncoding="UTF-8"%>
 </div>
 <div id="main">
 <div id="top">
-<p>UserCreateConfirm</p>
+<p>新規ユーザー登録確認</p>
 </div>
 <div>
 <h3>登録する内容は以下でよろしいでしょうか？</h3>

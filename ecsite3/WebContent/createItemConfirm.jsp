@@ -23,12 +23,12 @@ pageEncoding="UTF-8"%>
 
 <div id="main">
 <div id="top">
-<p>CreateItemConfirm</p>
+<p>商品追加確認</p>
 </div>
 
 <div>
 <h3>追加する商品の情報は以下でよろしいでしょうか。</h3>
-<table>
+<table border="2">
 
 <s:form action="CreateItemCompleteAction">
 <tr id="box">
@@ -57,6 +57,9 @@ pageEncoding="UTF-8"%>
 <s:property value="newItemStock" escape="false" />
 </td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>
 <s:submit value="完了" />

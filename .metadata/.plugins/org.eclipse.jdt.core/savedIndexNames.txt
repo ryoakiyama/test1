@@ -121,7 +121,6 @@ INDEX VERSION 1.127+C:\Users\internousdev\Desktop\workspace\workspace-akiyama\te
 1148464110.index
 2683543527.index
 2914825215.index
-1018903480.index
 2905071432.index
 2371906397.index
 1077754398.index

@@ -25,7 +25,7 @@ pageEncoding="UTF-8"%>
 
 <div id="main">
 <div id="top">
-<p>createItemComplete</p>
+<p>商品追加完了</p>
 </div>
 <div>
 

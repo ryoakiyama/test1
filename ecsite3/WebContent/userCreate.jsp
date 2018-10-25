@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Home画面</title>
+<title>UserCreate画面</title>
 <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
 
@@ -23,7 +23,7 @@ pageEncoding="UTF-8"%>
 </div>
 <div id="main">
 <div id="top">
-<p>UserCreate</p>
+<p>新規ユーザー登録</p>
 </div>
 <div>
 <s:if test="errorMessage != ''">

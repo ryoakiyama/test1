@@ -23,13 +23,13 @@ pageEncoding="UTF-8"%>
 </div>
 <div id="main">
 <div id="top">
-<p>Login</p>
+<p>ログイン画面</p>
 </div>
 <div>
 <h3>商品を購入する際はログインをお願いします。</h3>
 <s:form action="LoginAction">
-<s:textfield name="loginUserId"/>
-<s:password name="loginPassword"/>
+<s:textfield name="loginUserId" placeholder="ID"/>
+<s:password name="loginPassword" placeholder="PASSWORD"/>
 <s:submit value="ログイン"/>
 </s:form>
 <br/>

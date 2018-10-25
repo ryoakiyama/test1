@@ -29,8 +29,8 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 	private String loginUserId;
 	private String userMasterId;
 	private String errorMessage;
-
 	private String pay;
+	
 	private List<BuyItemCompleteDTO> itemInfoList = new ArrayList<BuyItemCompleteDTO>();
 
 	public String execute() throws SQLException {

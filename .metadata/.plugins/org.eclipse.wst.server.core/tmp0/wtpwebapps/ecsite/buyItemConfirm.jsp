@@ -56,10 +56,13 @@ function submitAction(url) {
 <tr>
 <td><s:property value="itemName" /></td>
 <s:hidden name="itemName" value="%{itemName}"/>
+
 <td><s:property value="itemPrice" /><span>円</span></td>
 <s:hidden name="itemPrice" value="%{itemPrice}"/>
+
 <td><s:property value="totalCount" /><span>個</span></td>
 <s:hidden name="totalCount" value="%{totalCount}"/>
+
 <td><s:property value="totalPrice" /><span>円</span></td>
 <s:hidden name="totalPrice" value="%{totalPrice}"/>
 </tr>

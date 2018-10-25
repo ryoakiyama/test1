@@ -27,6 +27,7 @@ public class BuyItemCompleteDAO {
 			ps.setString(4, user_master_id);
 			ps.setString(5, pay);
 			ps.setString(6, dateUtil.getDate());
+			count = ps.executeUpdate();
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{

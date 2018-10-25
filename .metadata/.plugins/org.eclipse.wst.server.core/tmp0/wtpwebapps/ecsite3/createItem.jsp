@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<title>Home画面</title>
+<title>CreateItem画面</title>
 <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>

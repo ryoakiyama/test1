@@ -27,10 +27,30 @@
 <result name="success">createItem.jsp</result>
 </action>
 
+<!-- BuyItemConfirmAction -->
+<action name="BuyItemConfirmAction" class="com.internousdev.ecsite3.action.BuyItemConfirmAction" method="execute">
+<result name="success">buyItemComplete.jsp</result>
+<result name="error">error.jsp</result>
+<result name="back">buyItem.jsp</result>
+</action>
+
+
 <action name="CreateItemConfirmAction" class="com.internousdev.ecsite3.action.CreateItemConfirmAction" method="execute">
 <result name="success">createItemConfirm.jsp</result>
 <result name="error">error.jsp</result>
 </action>
+
+
+<action name="MyPageAction" class="com.internousdev.ecsite3.action.MyPageAction" method="execute">
+<result name="success">myPage.jsp</result>
+<result name="error">error.jsp</result>
+</action>
+
+
+<action name="LogoutAction" class="com.internousdev.ecsite3.action.LogoutAction" method="execute">
+<result name="success">home.jsp</result>
+</action>
+
 
 <action name="CreateItemCompleteAction" class="com.internousdev.ecsite3.action.CreateItemCompleteAction" method="execute">
 <result name="success">createItemComplete.jsp</result>
@@ -51,6 +71,14 @@
 <action name="UserCreateCompleteAction" class="com.internousdev.ecsite3.action.UserCreateCompleteAction" method="execute">
 <result name="success">userCreateComplete.jsp</result>
 </action>
+
+<action name="BuyItemAction" class="com.internousdev.ecsite3.action.BuyItemAction" method="execute">
+<result name="success">buyItemConfirm.jsp</result>
+<result name="error">buyItem.jsp</result>
+</action>
+
+
+
 
 
 </package>

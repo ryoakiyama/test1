@@ -63,6 +63,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		for(int i = 0; i < idList.length;i++){
 			for(String check : checkList){
 				System.out.println("CHECKED ID-------->" + check);
+
+
+
 				if(check.equals(String.valueOf((idList[i])))){
 					BuyItemDTO dto = new BuyItemDTO();
 					id=idList[i].toString();
@@ -78,6 +81,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 					dto.setItemStock(buyItemDTOList.get(i).getItemStock());
 
 					dto.setTotalCount(String.valueOf(countList[i].toString()));
+
 					dto.setUserMasterId(userMasterId);
 					//pay = idList[i].toString();
 					if(pay.equals("2")) {

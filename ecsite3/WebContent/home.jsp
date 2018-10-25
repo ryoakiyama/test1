@@ -30,7 +30,7 @@ pageEncoding="UTF-8"%>
 <s:form action="HomeAction">
 <s:submit value="商品購入"/>
 </s:form>
-
+<br>
 <s:form action="CreateItemAction">
 <s:submit value="管理画面"/>
 </s:form>

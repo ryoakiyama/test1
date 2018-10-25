@@ -79,6 +79,8 @@ if(deleteFlg == null) {
 	return this.message;
 
 	}
+	
+	
 	public void setMessage(String message) {
 	this.message = message;
 	}

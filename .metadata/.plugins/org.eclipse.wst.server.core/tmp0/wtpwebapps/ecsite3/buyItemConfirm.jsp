@@ -12,7 +12,7 @@ pageEncoding="UTF-8"%>
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<title>Home画面</title>
+<title>商品購入確認画面</title>
 <link rel="stylesheet" type="text/css" href="./css/style.css" />
 <script type="text/javascript">
 
@@ -24,6 +24,8 @@ function submitAction(url) {
 }
 
 </script>
+
+
 </head>
 <body>
 
@@ -39,7 +41,7 @@ function submitAction(url) {
 <div>
 
 <s:form>
-<table>
+<table border="2">
 <tr>
 <td>商品名</td>
 <td>値段</td>
@@ -50,10 +52,11 @@ function submitAction(url) {
 <tr>
 <td><s:property value="itemName" /></td>
 <s:hidden name="itemName" value="%{itemName}"/>
-<td><s:property value="itemPrice" value="%{itemPrice}"/>
+
+<td><s:property value="itemPrice" /><span>円</span></td>
 <s:hidden name="itemPrice" value="%{itemPrice}"/>
 
-<td><s:property value="totalPrice" /><span>円</span></td>
+<td><s:property value="totalCount" /><span>個</span></td>
 <s:hidden name="totalCount" value="%{totalCount}"/>
 
 <td><s:property value="totalPrice" /><span>円</span></td>
@@ -61,7 +64,7 @@ function submitAction(url) {
 </tr>
 <s:hidden name="id" value="%{id}"/>
 <s:hidden name="itemTransactionId" value="%{itemTransactionId}"/>
-<s:hidden name="itemPrice" value="%{itemPrice}"/>
+
 
 <s:hidden name="itemStock" value="%{itemStock}"/>
 <s:hidden name="count" value="%{count}"/>
@@ -75,17 +78,20 @@ function submitAction(url) {
 <tr>
 <td>支払い方法</td>
 <s:if test="pay==1">
-<td>現金払い</td>
+<td>【現金払い】</td>
 </s:if>
 <s:if test="pay==2">
-<td>クレジットカード</td>
+<td>【クレジットカード】</td>
 </s:if>
 <s:hidden name="pay" value="%{pay}"/>
 </tr>
 
 <tr>
-<td><input type="button" value="戻る" onclick="submitAction('HomeAction')" /></td>
-<td><input type="button" value="完了" onclick="submitAction('BuyItemConfimAction')" /></td>
+<td><input type="button" value="戻る"
+onclick="submitAction('HomeAction')" /></td>
+<td><input type="button" value="完了"
+onclick="submitAction('BuyItemConfirmAction')" /></td>
+
 </tr>
 </table>
 </s:form>
@@ -100,4 +106,3 @@ function submitAction(url) {
 
 </body>
 </html>
-

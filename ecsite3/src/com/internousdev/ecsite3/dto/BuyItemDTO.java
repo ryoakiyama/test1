@@ -8,7 +8,7 @@ public class BuyItemDTO {
 	private String itemStock;
 	private String count;
 	private String pay;
-	private String userMasteId;
+	private String userMasterId;
 	private String totalPrice;
 	private String totalCount;
 	private String payment;
@@ -49,11 +49,11 @@ public class BuyItemDTO {
 	public void setPay(String pay) {
 		this.pay = pay;
 	}
-	public String getUserMasteId() {
-		return userMasteId;
+	public String getUserMasterId() {
+		return userMasterId;
 	}
-	public void setUserMasteId(String userMasteId) {
-		this.userMasteId = userMasteId;
+	public void setUserMasterId(String userMasterId) {
+		this.userMasterId = userMasterId;
 	}
 	public String getTotalPrice() {
 		return totalPrice;

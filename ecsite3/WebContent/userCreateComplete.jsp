@@ -12,7 +12,7 @@ pageEncoding="UTF-8"%>
 	<meta http-equiv="imagetoolbar" content="no" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
-	<title>Login画面</title>
+	<title>UserCreateComplete画面</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
@@ -23,7 +23,7 @@ pageEncoding="UTF-8"%>
 	</div>
 	<div id="main">
 	<div id="top">
-	<p>NewItemComplete!!</p>
+	<p>新規ユーザー登録完了</p>
 	</div>
 	<div>
 

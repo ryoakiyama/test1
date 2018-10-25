@@ -10,6 +10,13 @@ public class Helloworld {
 
 	public static void main(String[] args) {
 
+		String[] bakuryu = {"三日月","伊吹","伊賀","村田"};
+
+		for(String stamen:bakuryu){
+			System.out.println(stamen);
+
+		}
+
 		System.out.println("あなたの名前を入力してください");
 		Scanner scn = new Scanner(System.in);
 

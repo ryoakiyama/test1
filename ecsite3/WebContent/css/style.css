@@ -1,8 +1,9 @@
 
 body{
-	background-color:sandybrown;
+	background-image:url("back3.jpg");
 	margin:0 auto;
 	text-align:center;
+    font-family:Gulim;
 
 }
 
@@ -28,6 +29,8 @@ margin:0 auto;
 
 #top{
 	background-color:white;
+	font-weight:700;
+	font-size:20px;
 
 	line-height:40px;
 }
@@ -36,8 +39,11 @@ margin:0 auto;
 	margin-top:30px;
 }
 
-
-
 input:hover{
-	background-color:lightyellow;
+	background-color:midnightblue;
+	transition:0.7s;
+	color:white;
 }
+
+
+
