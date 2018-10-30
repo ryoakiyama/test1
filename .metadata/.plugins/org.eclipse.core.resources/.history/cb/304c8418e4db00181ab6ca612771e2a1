@@ -1,0 +1,21 @@
+package akiyama;
+
+public class Person {
+	public String name;
+	public int age;
+	public String from;
+
+
+	Person(String name,int age,String from){
+		this.name = name;
+		this.age = age;
+		this.from = from;
+		profile();
+	}
+
+	public void profile(){
+		System.out.println("私は"+this.name + this.from+"です");
+
+	}
+
+}

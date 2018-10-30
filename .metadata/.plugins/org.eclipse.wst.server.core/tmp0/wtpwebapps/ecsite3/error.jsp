@@ -21,9 +21,16 @@ pageEncoding="UTF-8"%>
 
 <div id="main"><div id="top">
 <p>エラーが発生しました。</p>
+
 </div>
 
 <div>
+<s:if test="errorMessage != ''">
+<b>
+<s:property value="errorMessage" />
+</b>
+</s:if>
+
 
 <p>Homeへ戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 <p>ログアウトする場合は<a href='<s:url action="LogoutAction" />'>こちら</a></p>

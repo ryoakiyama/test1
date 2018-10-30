@@ -45,5 +45,15 @@ input:hover{
 	color:white;
 }
 
+b{
+	color:red;
+}
+
+
+.select:hover{
+	background-color:midnightblue;
+	transition:0.7s;
+	color:white;
+}
 
 

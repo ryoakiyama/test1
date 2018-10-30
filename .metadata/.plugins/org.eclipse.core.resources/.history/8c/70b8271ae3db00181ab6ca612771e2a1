@@ -1,0 +1,17 @@
+package akiyama;
+
+public class Person {
+
+
+	Person(String name,int age,String from){
+		this.name = name;
+		this.age = age;
+		this.from = from;
+	}
+	
+	public String profile(String name,String from){
+		return this.name + this.from;
+		
+	}
+
+}

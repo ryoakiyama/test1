@@ -1,0 +1,17 @@
+package akiyama;
+
+public class Helloworld {
+
+	public static void main(String[] args) {
+
+		Person a = new Person("taro",20,"kanagawa");
+		a.name ="二郎";
+
+
+
+
+
+
+
+	}
+}

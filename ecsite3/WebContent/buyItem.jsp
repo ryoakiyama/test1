@@ -27,6 +27,15 @@ pageEncoding="UTF-8"%>
 <p>商品購入</p>
 </div>
 <div>
+<p>
+
+<s:if test="errorMessage != ''">
+<b>
+<s:property value="errorMessage" />
+</b>
+</s:if>
+
+</p>
 <h3>どの商品を購入しますか？</h3>
 
 <s:form action="BuyItemAction">
@@ -43,11 +52,11 @@ pageEncoding="UTF-8"%>
 
 <s:iterator value="#session.buyItemDTOList">
 	<tr>
-	<td><s:checkbox name="checkList" value="checked" fieldValue="%{id}"/></td>
+	<td><s:checkbox name="checkList" class="select" value="checked" fieldValue="%{id}"/></td>
 	<td><s:property value="id" /><s:hidden name="id" value="%{id}" /></td>
 	<td><s:property value="itemName" /><s:hidden name="itemName" value="%{itemName}" /></td>
 	<td><s:property value="itemPrice" /><s:hidden name="itemPrice" value="%{itemPrice}" /></td>
-	<td><select name="count">
+	<td><select name="count" class="select">
 		<option value="1" selected="selected">1</option>
 		<option value="2">2</option>
 		<option value="3">3</option>
@@ -61,7 +70,7 @@ pageEncoding="UTF-8"%>
 
 <table>
 <tr>
-<td><span>支払い方法</span></td>
+<td><span>支払い方法を選んでください</span></td>
 </tr>
 
 <tr>

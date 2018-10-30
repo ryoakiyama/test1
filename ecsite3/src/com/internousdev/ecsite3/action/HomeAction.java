@@ -32,5 +32,3 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		return this.session;
 	}
 }
-
-

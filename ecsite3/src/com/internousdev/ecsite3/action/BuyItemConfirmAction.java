@@ -39,7 +39,7 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 		System.out.println("BuyItemCompleteAction--------------");
 
 		if(userMasterId.indexOf(",") > 0){
-			userMasterId = String.valueOf((userMasterId.split(",",0))[0]);
+			userMasterId = String.valueOf((userMasterId.split(", ",0))[0]);
 		}
 
 		loginUserId = userMasterId;
@@ -60,13 +60,14 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 		System.out.println(userMasterId);
 		System.out.println("----------------------------------");
 
-		String[] idList = id.split(",",0);
+		String[] idList = id.split(", ",0);
 		String[] itemNameList = itemName.split(", ",0);
 		String[] itemPriceList = itemPrice.split(", ",0);
 		String[] itemStockList = itemStock.split(", ",0);
 		String[] countList = count.split(", ",0);
 
-		int c=0;
+		// 購入した商品が全て購入できたかのチェックフラグ
+		int countALL=0;
 
 		for(int i=0; i<idList.length;i++){
 			BuyItemCompleteDTO dto = new BuyItemCompleteDTO();
@@ -83,10 +84,22 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 			dto.setTotalPrice(String.valueOf(total));
 			dto.setTotalCount(String.valueOf(countList[i]));
 			dto.setUserMasterId(userMasterId);
+
 			if (pay.equals("2")) {
 				dto.setPay("クレジットカード");
 			} else {
 				dto.setPay("現金支払い");
+			}
+
+
+			//在庫数の確認
+			int dbstock = dao.itemStockInfo(idList[i]);
+			//dbstockはcountが入っている
+			if( Integer.parseInt(countList[i]) > dbstock ){
+				//itemStockListではないのか？
+				System.out.println("ここが表示されているとエラーです。");
+
+				return ERROR;
 			}
 
 			System.out.println("-----カート情報["+i+"]---");
@@ -104,13 +117,23 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware 
 			itemInfoList.add(dto);
 
 			try{
-				c += dao.buyItemInfo(dto.getItemTransactionId(),dto.getUserMasterId(),dto.getTotalPrice(),dto.getTotalCount(),dto.getPay());
+				int c = 0;
+				//実際に購入をする箇所
+				c =	dao.buyItemInfo(dto.getItemTransactionId(),dto.getUserMasterId(),dto.getTotalPrice(),dto.getTotalCount(),dto.getPay());
+
+				if (c > 0) {
+					//アップデートをかける
+					int intTotalCount = Integer.parseInt(dto.getTotalCount());
+					int updateDbStock = dbstock - intTotalCount;
+					dao.updateItemStock(Integer.parseInt(dto.getId()), updateDbStock);
+				}
+				countALL += c;
 			}catch(SQLException e){
 				e.printStackTrace();
 			}
 		}
 
-		if(c == idList.length){
+		if(countALL == idList.length){
 			System.out.println("DBへ登録");
 			result =SUCCESS;
 		}else{

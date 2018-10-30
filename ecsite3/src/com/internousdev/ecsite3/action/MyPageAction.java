@@ -1,6 +1,5 @@
 package com.internousdev.ecsite3.action;
 
-
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
@@ -21,18 +20,14 @@ public class MyPageAction extends ActionSupport implements SessionAware {
 
 
 	public String execute() throws SQLException{
-		if(!session.containsKey("login_user_id")){
+		if(!session.containsKey("login_user_id") ){
 			return ERROR;
 		}
 
 	if(deleteFlg == null){
-
 		String user_master_id = session.get("login_user_id").toString();
 		myPageList = myPageDAO.getMyPageUserInfo(user_master_id);
-
-
 	}else if(deleteFlg.equals("1")){
-
 		delete();
 
 	}

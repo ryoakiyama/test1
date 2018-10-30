@@ -29,7 +29,6 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	public Map<String, Object> session;
 
 	private List<BuyItemDTO> buyItemDTOList = new ArrayList<BuyItemDTO>();
-
 	public List<BuyItemDTO> responceList = new  ArrayList<BuyItemDTO>();
 
 	public String execute() throws SQLException{
@@ -79,16 +78,18 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 					int total = price * intTotalCount;
 					dto.setTotalPrice(String.valueOf(total));
 					dto.setItemStock(buyItemDTOList.get(i).getItemStock());
-
 					dto.setTotalCount(String.valueOf(countList[i].toString()));
-
 					dto.setUserMasterId(userMasterId);
 					//pay = idList[i].toString();
+
+
 					if(pay.equals("2")) {
 						dto.setPay("クレジットカード");
 					} else {
 						dto.setPay("現金払い");
 					}
+					//支払い方法を、番号ではなく文字で出力するための方法
+
 
 //					dto.setPay(check);
 
@@ -106,6 +107,13 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 					System.out.println("--------------------------------");
 
 					responceList.add(dto);
+
+					//新規追加↓
+
+
+
+					//新規追加↑
+
 				}
 			}
 		}
